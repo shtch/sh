@@ -1,0 +1,12 @@
+CREATE table "PS_D_SERVICE_PACTYPE" (
+    "SERVICE_PACTYPE_ID" NUMBER(18,0) NOT NULL,
+    "NAME"               VARCHAR2(128) NOT NULL,
+    "SORDER"             NUMBER(8,0) NOT NULL,
+    "ACTIVE"             NUMBER(1,0) NOT NULL,
+    "DATE_CREATED"       DATE NOT NULL,
+    constraint  "PS_D_SERVICE_PACTYPE_PK" primary key ("SERVICE_PACTYPE_ID"))
+/
+
+alter table "PS_D_SERVICE_PACTYPE" add
+constraint "PS_D_SERVICE_PACTYPE_UK1" unique ("NAME")
+/   
